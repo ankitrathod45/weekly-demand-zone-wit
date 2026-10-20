@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WIT Trade Scanner</title>
+<style>
+body{margin:0;background:#0b1220;color:#f1f5f9;font-family:Arial,sans-serif;padding:16px}
+h1{color:#38bdf8;font-size:26px}
+.card{background:#172033;border:1px solid #334155;border-radius:12px;padding:16px;margin:14px 0}
+label{display:block;margin:12px 0 6px}
+select,button{width:100%;padding:12px;border-radius:8px;border:1px solid #475569;background:#0f172a;color:white;font-size:16px}
+button{background:#0284c7;border:0;margin-top:14px;font-weight:bold}
+.note{color:#cbd5e1;font-size:14px;line-height:1.5}
+.status{color:#fbbf24}
+</style>
+</head>
+<body>
+<h1>WIT Trade Scanner</h1>
+<p>Nifty 250 · Weekly Demand Zones</p>
+
+<div class="card">
+<h3>Scanner Settings</h3>
+<label>Stock Universe</label>
+<select><option>Nifty 250</option></select>
+
+<label>Timeframe</label>
+<select><option>Weekly</option></select>
+
+<label>Demand Zone Type</label>
+<select id="zone">
+<option>DBR + RBR</option>
+<option>DBR only</option>
+<option>RBR only</option>
+</select>
+
+<label>Supertrend ATR Period</label>
+<select><option>10</option></select>
+
+<label>Supertrend Multiplier</label>
+<select><option>3</option></select>
+
+<label>Trend Filter</label>
+<select><option>Weekly Supertrend UP only</option></select>
+
+<button onclick="alert('Dashboard ready. Live market data connection is not configured yet.')">Scan Nifty 250</button>
+</div>
+
+<div class="card">
+<h3>Scan Results</h3>
+<p class="status">Waiting for market data connection</p>
+<p class="note">DBR/RBR zones, Fresh/Used status और Supertrend UP results तभी दिखेंगे जब reliable stock-market data source जोड़ा जाएगा।</p>
+</div>
+
+<p class="note">Prototype only — यह अभी live trading signals नहीं देता।</p>
+</body>
+</html>
